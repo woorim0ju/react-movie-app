@@ -15,9 +15,9 @@ const MovieDetail = () => {
 
   useEffect(() => {
     dispatch(fetchAsyncSelectedOneDetail(imdbID));
-    return function () {
-      dispatch(removeSelectedOne());
-    };
+    // return function () { //TypeError: Object(...) is not a function 에러가 나와 주석 처리
+    //   dispatch(removeSelectedOne());
+    // };
   }, [dispatch, imdbID]);
 
   return (
